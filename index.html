@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Simple Test</title>
+
+        <link rel="stylesheet" href="game.css" />
+    </head>
+    <body>
+        <div class="game-container">
+            <div class="player-object-container">
+                <div id="hp1">
+                    <div id="hp1-text"></div>
+                    <canvas id="canvas-hp1"></canvas>
+                </div>
+                <div id="pk1" class="pokemon"></div>
+            </div>
+
+            <div class="enemy-object-container">
+                <div id="hp2">
+                    <div id="hp2-text"></div>
+                    <canvas id="canvas-hp2"></canvas>
+                </div>
+                <div id="pk2" class="pokemon"></div>
+            </div>
+
+            <div id="comment"></div>
+            <div class="gui-btns">
+                <input type="button" class="btn" id="m0" />
+                <input type="button" class="btn" id="m1" />
+                <input type="button" class="btn" id="m2" />
+                <input type="button" class="btn" id="m3" />
+            </div>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
+</html>
