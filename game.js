@@ -17,7 +17,7 @@ let pkmList = [
             ["Flamethrower", "fire", 95, 0.95],
             ["Dragon Claw", "dragon", 80, 0.95],
             ["Air Slash", "fly", 75, 0.85],
-            ["Slash", "normal", 70],
+            ["Slash", "normal", 70, 0.8],
         ],
     ],
     [
@@ -95,6 +95,10 @@ for (i = 0; i < 4; i++) {
     function addHandler(btn, move, pk1, pk2) {
         btn.addEventListener("click", function (e) {
             attack(move, pk1, pk2, "hp2", "");
+			if ()
+			{
+
+			}
             setTimeout(attack, 2000, pk2.moves[Math.floor(Math.random() * 3)], pk2, pk1, "hp1", "Foe ");
         });
     }
@@ -148,11 +152,19 @@ function attack(move, attacker, receiver, hp, owner) {
             document.getElementById("comment").innerHTML = "<p>Attack missed!</p>";
         });
     }
-    checkWinner(hp);
+  //  checkWinner(hp);
 }
 
-function checkWinner(hp) {
-    let f = pk1.hp <= 0 ? pk1 : pk2.hp <= 0 ? pk2 : false;
+
+function checkPokemonHp(attacker, receiver){
+	let f = pk1.hp <= 0 ? pk1 : pk2.hp <= 0 ? pk2 : false;
+
+	return (f)
+}
+
+
+function checkWinner(auto) {
+    let f = auto;
     if (f != false) {
         alert("GAME OVER: " + f.name + " fainted!");
         document.getElementById(hp + "-text").innerHTML = "<p>HP: 0/" + f.fullHp + "</p>";
